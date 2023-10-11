@@ -12,8 +12,16 @@ h1 {
   padding: 10px;
 }
 
+/* 물품 목록 스타일 */
+ul {
+  list-style: none;
+  padding: 0;
+}
+
 li {
-  margin-bottom: 10px; /*물품 항목 사이에 빈 공간*/
+  margin-bottom: 10px; /* 물품 항목 사이에 빈 공간 */
+  display: flex;
+  align-items: center; /* 요소를 수직 가운데 정렬 */
 }
 
 /* 폼 스타일 */
@@ -44,8 +52,8 @@ button {
   color: #fff;
   border: none;
   cursor: pointer;
-  padding: 10px; /* 패딩 추가 */
-  box-sizing: border-box; /* 패딩과 경계선을 폭과 높이에 포함 */
+  padding: 10px;
+  box-sizing: border-box;
 }
 
 button:hover {
@@ -65,4 +73,9 @@ a {
 
 a:hover {
   background-color: #555;
+}
+
+/* 버튼과 Edit 링크 사이 간격 조절 */
+li button {
+  margin-left: 10px;
 }

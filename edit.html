@@ -4,6 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="my.css">
+    <a href="index.html">[index.html]</a>
+    <a href="add.html">[add.html]</a>
+    <a href="edit.html">[edit.html]</a>
+    <a href="view.html">[view.html]</a>
     <title>게시물 수정</title>
 </head>
 <body>
@@ -20,7 +24,7 @@
     </form>
     <script>
         function validateForm() {
-            // 필수 항목에 대한 유효성 검사를 수행하는 JavaScript 코드 추가
+            
             var item = document.forms["myForm"]["item"].value;
             var name = document.forms["myForm"]["name"].value;
             var price = document.forms["myForm"]["price"].value;
@@ -29,7 +33,7 @@
 
             if (item == "" || name == "" || price == "" || quantity == "" || purchaseDate == "") {
                 alert("필수 항목을 모두 입력하세요.");
-                return false; // 유효성 검사 실패 시 폼 제출 못하게 막음
+                return false; // validate 통과 못하면 폼 제출 못하게
             }
 
             return true;

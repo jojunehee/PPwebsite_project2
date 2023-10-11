@@ -4,20 +4,71 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="my.css">
+    <a href="index.html">[index.html]</a>
+    <a href="add.html">[add.html]</a>
+    <a href="edit.html">[edit.html]</a>
+    <a href="view.html">[view.html]</a>
     <title>물품 목록</title>
+    <style>
+        /* 추가된 CSS 스타일 */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            padding: 8px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        tr:hover {
+            background-color: #f5f5f5;
+        }
+        
+    </style>
 </head>
 <body>
     <h1>물품 목록</h1>
-    <ul>
-        <li><a href="view.html">물품 1</a></li>
+    <table>
+        <thead>
+            <tr>
+                <th>물품</th>
+                <th>품목</th>
+                <th>품명</th>
+                <th>가격</th>
+                <th>수량</th>
+                <th>구매 일자</th>
+                <th>재고</th>
+                <th>상태</th>
+                <!-- 필요한 항목을 추가하세요 -->
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><a href="view.html">물품 1</a></td>
+                <td>나무</td>
+                <td>50mm 편백나무</td>
+                <td>10,000원</td></td>
+                <td>31개</td>
+                <td>2020-10-03</td>
+                <td>42개</td>
+                <td>판매 중</td></td<>
+
+            </td<>
+            <tr>
+                <td><a href="view.html">물품 2</a></td>
+                <td>금속</td>
+                <td>10kg 탄소강</td>
+                <td>103,000원</td></td>
+                <td>1023개</td>
+                <td>2022-09-01</td>
+                <td>548개</td>
+                <td>판매 중단</td></td<>
+            </tr>
+            <!-- 다른 물품 항목을 유사한 방식으로 추가 -->
+        </tbody>
+    </table>
     
-        <li><a href="view.html">물품 2</a></li>
+    <a href="add.html" style="display: block; text-align: center;">[Add]</a>
 
-        <li><a href="view.html">물품 3</a></li>
-
-        <li><a href="view.html">물품 4</a></li>
-        <!-- 상품이 추가될 자리 -->
-    </ul>
-    <a href="add.html">[Add]</a>
 </body>
 </html>
