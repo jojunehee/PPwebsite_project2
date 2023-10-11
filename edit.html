@@ -12,7 +12,7 @@
 </head>
 <body>
     <h1>게시물 수정</h1>
-    <form name="myForm" action="#" method="POST" onsubmit="return confirmSubmit()">
+    <form name="myForm" action="view.html" method="POST" onsubmit="return confirmSubmit()">
         <input type="text" name="item" placeholder="품목" required><br>
         <input type="text" name="name" placeholder="품명" required><br>
         <input type="number" name="price" placeholder="가격" required><br>
@@ -37,7 +37,7 @@
                 return false; // 유효성 검사 실패하면 폼 제출 못하게
             }
 
-            //  대화상자
+            // 대화상자
             if (confirm("수정할까요?")) {
                 // 사용자가 확인 버튼을 누르면 폼 제출
                 return true;
