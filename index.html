@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="my.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <title>상품 목록</title>
+</head>
+<body>
+    <!-- 상품 목록 표시 -->
+    <table class="table">
+        <thead>
+            <tr>
+                <th>품목</th>
+                <th>품명</th>
+                <th>가격</th>
+                <th>수량</th>
+                <th>구매일</th>
+                <th>재고</th>
+                <th>상태</th>
+                <th>작업</th>
+            </tr>
+        </thead>
+        <tbody id="productList">
+            <!-- 여기에 상품 목록을 추가할 것입니다. -->
+        </tbody>
+    </table>
+
+    <!-- "추가" 버튼 추가 -->
+    <button><a href="add.html">추가</a></button>
+
+    <!-- ... (이전 코드 부분은 여기에 포함) ... -->
+
+<script>
+  // 로컬 스토리지에서 데이터 불러오기
+  const storedData = localStorage.getItem('products');
+
+  if (storedData) {
+      // JSON 형식으로 파싱
+      const productList = JSON.parse(storedData);
+
+      // 상품 목록을 표시
+      const productListElement = document.getElementById('productList');
+      productList.forEach(function (product, index) { // index를 추가하여 목록의 순서를 추적
+          const row = document.createElement('tr');
+          const itemCell = document.createElement('td');
+          const nameCell = document.createElement('td');
+          const priceCell = document.createElement('td');
+          const quantityCell = document.createElement('td');
+          const purchaseDateCell = document.createElement('td');
+          const stockCell = document.createElement('td');
+          const statusCell = document.createElement('td');
+          const actionCell = document.createElement('td');
+
+          itemCell.textContent = product.item;
+          nameCell.textContent = product.name;
+          priceCell.textContent = product.price;
+          quantityCell.textContent = product.quantity;
+          purchaseDateCell.textContent = product.purchaseDate;
+          stockCell.textContent = product.stock;
+          statusCell.textContent = product.status;
+
+          row.appendChild(itemCell);
+          row.appendChild(nameCell);
+          row.appendChild(priceCell);
+          row.appendChild(quantityCell);
+          row.appendChild(purchaseDateCell);
+          row.appendChild(stockCell);
+          row.appendChild(statusCell);
+
+          // [Edit] 및 [Delete] 링크 추가
+          const editLink = document.createElement('a');
+          editLink.href = 'edit.html';
+          editLink.textContent = '수정';
+          actionCell.appendChild(editLink);
+          actionCell.appendChild(document.createTextNode(' | '));
+
+          const deleteLink = document.createElement('a');
+          deleteLink.href = '#';
+          deleteLink.textContent = '삭제';
+          
+          // 삭제 버튼 클릭 이벤트 처리
+          deleteLink.addEventListener('click', function () {
+              if (confirm('게시물을 삭제할까요?')) {
+                  // 목록에서 삭제
+                  productList.splice(index, 1);
+                  
+                  // 로컬 스토리지에서도 삭제
+                  localStorage.setItem('products', JSON.stringify(productList));
+
+                  // 테이블에서 행 제거
+                  row.remove();
+              }
+          });
+
+          actionCell.appendChild(deleteLink);
+
+          row.appendChild(actionCell);
+
+          productListElement.appendChild(row);
+      });
+  }
+</script>
+</body>
+</html>

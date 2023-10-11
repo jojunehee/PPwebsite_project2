@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="my.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <title>상품 추가</title>
+</head>
+<body>
+    <form method="POST" action="save_product.php">
+        <!-- 필수 입력 필드에 대한 Validation 추가 -->
+        <div class="form-group">
+            <label for="item">품목</label>
+            <input type="text" class="form-control" id="item" name="item" required>
+        </div>
+        <div class="form-group">
+            <label for="name">품명</label>
+            <input type="text" class="form-control" id="name" name="name" required>
+        </div>
+        <div class="form-group">
+            <label for="price">가격</label>
+            <input type="number" class="form-control" id="price" name="price" required>
+        </div>
+        <div class="form-group">
+            <label for="quantity">수량</label>
+            <input type="number" class="form-control" id="quantity" name="quantity" required>
+        </div>
+        <div class="form-group">
+            <label for="purchaseDate">구매일</label>
+            <input type="date" class="form-control" id="purchaseDate" name="purchaseDate" required>
+        </div>
+        <div class="form-group">
+            <label for="stock">재고</label>
+            <input type="number" class="form-control" id="stock" name="stock" required>
+        </div>
+        <div class="form-group">
+            <label for="status">상태</label>
+            <input type="text" class="form-control" id="status" name="status" required>
+        </div>
+
+        <!-- "추가" 버튼을 추가 -->
+        <button type="submit" class="btn btn-primary" id="addButton">추가</button>
+    </form>
+
+    <script>
+        // "추가" 버튼을 클릭했을 때 알림 표시
+        document.querySelector('#addButton').addEventListener('click', function () {
+            alert('게시물이 추가됩니다.');
+        });
+    </script>
+</body>
+</html>

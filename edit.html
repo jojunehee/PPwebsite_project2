@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="my.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <title>상품 수정</title>
+</head>
+<body>
+    <form>
+        <!-- 필수 입력 필드에 대한 Validation 추가 -->
+        <div class="form-group">
+            <label for="item">품목</label>
+            <input type="text" class="form-control" id="item" required>
+        </div>
+        <!-- 다른 필드 추가 -->
+        <!-- 가격, 수량, 구매일, 재고, 상태 등 -->
+
+        <button type="submit" class="btn btn-primary">수정</button>
+    </form>
+
+    <script>
+        // 폼 제출 시 Validation 체크
+        document.querySelector('form').addEventListener('submit', function (event) {
+            const item = document.querySelector('#item').value;
+            // 다른 필드에 대한 Validation도 추가하세요
+            if (!item) {
+                event.preventDefault(); // 제출 방지
+                alert('필수 입력 필드를 모두 채워주세요.');
+            }
+        });
+    </script>
+</body>
+</html>
