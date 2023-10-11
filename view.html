@@ -3,16 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="my.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <title>상품 상세 정보</title>
+    <link rel="stylesheet" href="css/my.css">
+    <title>게시물 보기</title>
 </head>
 <body>
-    <!-- 상품 상세 정보 표시 -->
-    <h1>상품 상세 정보</h1>
-    <!-- 상품 정보 표시 -->
-    
-    <button><a href="edit.html">수정</a></button> |
-    <button onclick="confirm('게시물을 삭제할까요?')">삭제</button>
+    <h1>게시물 보기</h1>
+    <p>품목: 상품 1</p>
+    <p>품명: 상품명 1</p>
+    <p>가격: 1000원</p>
+    <p>수량: 10개</p>
+    <p>구매일: 2023-10-11</p>
+    <p>재고: 5개</p>
+    <p>상태: 판매 중</p>
+    <a href="edit.html">[Edit]</a>
+    <button onclick="confirmDelete()">Delete</button>
+    <script>
+        function confirmDelete() {
+            if (confirm("게시물을 삭제할까요?")) {
+                // 삭제 작업을 수행하는 코드 추가
+            }
+        }
+    </script>
 </body>
 </html>
