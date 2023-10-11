@@ -29,8 +29,10 @@
             var price = document.forms["myForm"]["price"].value;
             var quantity = document.forms["myForm"]["quantity"].value;
             var purchaseDate = document.forms["myForm"]["purchaseDate"].value;
+            var stock = document.forms["myForm"]["stock"].value;
+            var status = document.forms["myForm"]["status"].value;
 
-            if (item == "" || name == "" || price == "" || quantity == "" || purchaseDate == "") {
+            if (item == "" || name == "" || price == "" || quantity == "" || purchaseDate == "" || stock == "" || status == "") {
                 alert("필수 항목을 모두 입력하세요.");
                 return false; // 유효성 검사 실패하면 폼 제출 못하게
             }
