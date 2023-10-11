@@ -3,8 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/my.css">
-    <script src="js/validation.js"></script>
+    <link rel="stylesheet" href="my.css">
     <title>게시물 수정</title>
 </head>
 <body>
@@ -30,21 +29,11 @@
 
             if (item == "" || name == "" || price == "" || quantity == "" || purchaseDate == "") {
                 alert("필수 항목을 모두 입력하세요.");
-                return false; // 유효성 검사 실패 시 폼 제출 방지
+                return false; // 유효성 검사 실패 시 폼 제출 못하게 막음
             }
 
-            // 필요한 다른 유효성 검사 루틴을 추가할 수 있습니다.
-
-            return true; // 유효성 검사가 성공하면 true 반환
+            return true;
         }
     </script>
-    <script>
-        function confirmEdit() {
-            if (confirm("게시물을 수정할까요?")) {
-                // 수정 작업을 수행하는 코드 추가
-            }
-        }
-    </script>
-    <button onclick="confirmEdit()">수정</button>
 </body>
 </html>

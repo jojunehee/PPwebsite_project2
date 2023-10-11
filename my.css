@@ -1,0 +1,64 @@
+/* 기본 스타일 */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
+}
+
+/* 폼 스타일 */
+form {
+  max-width: 400px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  text-align: center; /* 폼 내부 요소 중앙 정렬 */
+}
+
+input[type="text"],
+input[type="number"],
+input[type="date"],
+button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+/* 버튼 스타일 */
+button {
+  background-color: #333;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  padding: 10px; /* 패딩 추가 */
+  box-sizing: border-box; /* 패딩과 경계선을 폭과 높이에 포함 */
+}
+
+button:hover {
+  background-color: #555;
+}
+
+/* 링크 스타일 */
+a {
+  text-decoration: none;
+  background-color: #333;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  display: inline-block;
+  transition: background-color 0.3s;
+}
+
+a:hover {
+  background-color: #555;
+}
