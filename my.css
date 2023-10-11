@@ -12,6 +12,10 @@ h1 {
   padding: 10px;
 }
 
+li {
+  margin-bottom: 10px; /*물품 항목 사이에 빈 공간*/
+}
+
 /* 폼 스타일 */
 form {
   max-width: 400px;
